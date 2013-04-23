@@ -1,4 +1,4 @@
-﻿@model SelectList
+﻿@model CMS.Models.Category
 
 @{
     ViewBag.Title = "Admin Area";
@@ -10,6 +10,42 @@
 }
 
 <section class="content-wrapper">
-    <h3>Add content</h3>
-        @Html.Partial("_ContentPartial")
+    <h3>Add or edit content on: @Html.DisplayFor(model => model.CatName)</h3>
+    <fieldset class="halfwidth">
+        <legend>Text content</legend>
+
+        <div class="editor-label">
+            <label>Submit new content</label>
+        </div>
+        <p>
+            <button>@Html.ActionLink("Text", "Create", "Text", new { id = Model.CatID }, string.Empty)</button>
+            <button>@Html.ActionLink("Picture", "Create", "Picture", new { id = Model.CatID }, string.Empty)</button>
+            <button>@Html.ActionLink("Video", "Create", "Video", new { id = Model.CatID }, string.Empty)</button>
+            <button>@Html.ActionLink("Link", "Create", "Link", new { id = Model.CatID }, string.Empty)</button>
+        </p>
+    </fieldset>
+
+@foreach (var text in Model.Texts)
+{
+    
+    @Html.Partial("_AdminTextPartial", text)
+}
+
+@foreach (var picture in Model.Pictures)
+{
+    
+    @Html.Partial("_AdminPicturePartial", picture)
+}
+
+@foreach (var video in Model.Videos)
+{
+    
+    @Html.Partial("_AdminVideoPartial", video)
+}
+
+@foreach (var link in Model.Links)
+{
+    
+    @Html.Partial("_AdminLinkPartial", link)
+}
 </section>

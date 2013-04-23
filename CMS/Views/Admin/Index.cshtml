@@ -1,4 +1,4 @@
-﻿@model SelectList
+﻿        @model CMS.Models.SiteConfig
 
 @{
     ViewBag.Title = "Admin Area";
@@ -11,5 +11,49 @@
 
 <section class="content-wrapper">
     <h3>Site configuration</h3>
-        <p class="halfwidth"> Partial site configuration</p>
+
+
+@using (Html.BeginForm("SiteConfig", "Admin"))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset class="halfwidth">
+        <legend>Configure your site</legend>
+
+        @Html.HiddenFor(model => model.SiteConfigID, new { @Value = ViewBag.SiteConfigID})
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteName, "Enter your site name")
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.SiteName, new { @Value = ViewBag.SiteName })
+            @Html.ValidationMessageFor(model => model.SiteName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteDesc, "Enter site description")
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.SiteDesc, new { @Value = ViewBag.SiteDesc })
+            @Html.ValidationMessageFor(model => model.SiteDesc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteStartCatID, "Select your start page")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("SiteStartCatID", "-- Make your pick --")
+            @Html.ValidationMessageFor(model => model.SiteStartCatID)
+        </div>
+
+        <p>
+            <input type="submit" value="Apply" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
 </section>

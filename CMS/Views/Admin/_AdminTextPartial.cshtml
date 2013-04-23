@@ -1,0 +1,24 @@
+﻿@model CMS.Models.Text
+
+    <fieldset class="halfwidth">
+        <legend>Text content</legend>
+
+        <div class="editor-label">
+            <label>Text title</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TextTitle)
+            </div>
+        <div class="editor-label">
+            <label>Text content</label>
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.TextData)
+        </div>
+
+        <p>
+            <button>@Html.ActionLink("Edit", "Edit", "Text", new { id = Model.TextID }, string.Empty)</button>
+            <button>@Html.ActionLink("Details", "Details", "Text", new { id = Model.TextID }, string.Empty)</button>
+            <button>@Html.ActionLink("Delete", "Delete", "Text", new { id = Model.TextID }, string.Empty)</button>
+        </p>
+    </fieldset>

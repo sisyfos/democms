@@ -1,4 +1,4 @@
-﻿@model SelectList
+﻿@model IEnumerable<CMS.Models.Category>
 
 @{
     ViewBag.Title = "Admin Area";
@@ -10,8 +10,7 @@
 }
 
 <section class="content-wrapper">
-    <h3>Work with pages</h3>
-        @Html.Partial("_CategoryCreatePartial", new CMS.Models.Category())
-        <p class="halfwidth"> OR </p>
-        @Html.Partial("_CategoryEditPartial", Model)
+    <h3>Create a new page or edit an existing</h3>
+        @Html.Partial("_AdminPageCreatePartial", new CMS.Models.Category())
+        @Html.Partial("_AdminPageEditPartial")
 </section>

@@ -1,0 +1,24 @@
+﻿@model CMS.Models.Link
+
+    <fieldset class="halfwidth">
+        <legend>Link content</legend>
+
+        <div class="editor-label">
+            <label>Text title</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LinkText)
+            </div>
+        <div class="editor-label">
+            <label>Text content</label>
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.LinkUrl)
+        </div>
+
+        <p>
+            <button>@Html.ActionLink("Edit", "Edit", "Text", new { id = Model.LinkID }, string.Empty)</button>
+            <button>@Html.ActionLink("Details", "Details", "Text", new { id = Model.LinkID }, string.Empty)</button>
+            <button>@Html.ActionLink("Delete", "Delete", "Text", new { id = Model.LinkID }, string.Empty)</button>
+        </p>
+    </fieldset>

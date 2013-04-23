@@ -1,0 +1,24 @@
+﻿@model CMS.Models.Video
+
+    <fieldset class="halfwidth">
+        <legend>Video content</legend>
+
+        <div class="editor-label">
+            <label>Video title</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VidTitle)
+            </div>
+        <div class="editor-label">
+            <label>Video description</label>
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.VidDesc)
+        </div>
+
+        <p>
+            <button>@Html.ActionLink("Edit", "Edit", "Text", new { id = Model.VidID }, string.Empty)</button>
+            <button>@Html.ActionLink("Details", "Details", "Text", new { id = Model.VidID }, string.Empty)</button>
+            <button>@Html.ActionLink("Delete", "Delete", "Text", new { id = Model.VidID }, string.Empty)</button>
+        </p>
+    </fieldset>

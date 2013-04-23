@@ -1,0 +1,24 @@
+﻿@model CMS.Models.Picture
+
+    <fieldset class="halfwidth">
+        <legend>Picture content</legend>
+
+        <div class="editor-label">
+            <label>Picture title</label>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PicTitle)
+            </div>
+        <div class="editor-label">
+            <label>Picture descriprion</label>
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.PicDesc)
+        </div>
+
+        <p>
+            <button>@Html.ActionLink("Edit", "Edit", "Text", new { id = Model.PicID }, string.Empty)</button>
+            <button>@Html.ActionLink("Details", "Details", "Text", new { id = Model.PicID }, string.Empty)</button>
+            <button>@Html.ActionLink("Delete", "Delete", "Text", new { id = Model.PicID }, string.Empty)</button>
+        </p>
+    </fieldset>

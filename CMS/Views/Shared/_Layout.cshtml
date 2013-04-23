@@ -10,24 +10,23 @@
     </head>
     <body>
         <header>
-        <div class="float-login">
+            <div class="content-wrapper">
+                <div class="float-left">
                     <p class="site-title">@Html.Action("SiteInfo", "Home")</p>
+                </div>
+                <div class="float-right">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>                        
                 </div>
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Sisyfos", "Index", "Home")</p>
-                </div>
                 <div class="float-center">
                     <hgroup class="title">
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
+                        <h2>@ViewBag.Message</h2>
+                    </hgroup>
                 </div>
-
               <nav>
                     @Html.Action("ShowMenu", "Menu")                    
-                    </nav>
+              </nav>
         </header>
         <div id="body">
         

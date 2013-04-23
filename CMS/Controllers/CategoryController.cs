@@ -54,7 +54,7 @@ namespace CMS.Controllers
             {
                 db.Categories.AddObject(category);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return new RedirectResult("~/Admin/Content/" + category.CatID, false);
             }
 
             ViewBag.TempID = new SelectList(db.Templates, "TempID", "TempName", category.TempID);

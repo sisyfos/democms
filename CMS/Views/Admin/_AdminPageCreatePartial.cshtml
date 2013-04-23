@@ -1,13 +1,13 @@
 ﻿@model CMS.Models.Category
 
-@using (Html.BeginForm("CreateCategory", "Admin")) {
+@using (Html.BeginForm("CreatePage", "Admin")) {
     @Html.ValidationSummary(true)
 
     <fieldset class="halfwidth">
         <legend>Create new page</legend>
 
         <div class="editor-label">
-            <label for="CatName">Enter page name to create:</label>
+            <label>Enter page name to create:</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.CatName)

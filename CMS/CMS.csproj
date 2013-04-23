@@ -183,6 +183,7 @@
     <Compile Include="Models\AccountModels.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\cms.Designer.cs">
       <DependentUpon>cms.edmx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -489,12 +490,6 @@
     <Content Include="Views\Home\Imagenew.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\SiteConfig\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\SiteConfig\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Image\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -516,19 +511,31 @@
     <Content Include="Views\Admin\_AdminHeaderPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\_CategoryCreatePartial.cshtml" />
+    <Content Include="Views\Admin\_AdminPageCreatePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\_CategoryEditPartial.cshtml" />
+    <Content Include="Views\Admin\_AdminPageEditPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\_ContentPartial.cshtml" />
+    <Content Include="Views\Admin\_AdminContentPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Admin\Content.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Admin\Page.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\_AdminTextPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\_AdminPicturePartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\_AdminVideoPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\_AdminLinkPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
