@@ -38,9 +38,13 @@ namespace CMS.Controllers
         //
         // GET: /Link/Create
 
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
-            ViewBag.CatID = new SelectList(db.Categories, "CatID", "CatName");
+
+            ViewBag.CatID = id;
+            var category = db.Categories.First(c => c.CatID == id.Value);
+            ViewBag.CatName = category.CatName;
+
             return View();
         }
 
