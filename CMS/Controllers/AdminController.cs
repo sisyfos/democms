@@ -95,7 +95,7 @@ namespace CMS.Controllers
 
             if (id.HasValue)
             {
-                category = db.Categories.Include("Texts").Include("Videos").Include("Links").Include("Pictures").First(c => c.CatID == id.Value);
+                category = db.Categories.First(c => c.CatID == id.Value);
             }
             else
             {

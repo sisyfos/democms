@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CMS.Models.Category>
+
+@{
+    ViewBag.Title = "Admin Area";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section featured {
+    @Html.Partial("_AdminHeaderPartial")
+}
+
+<h3>Add or edit content on a page</h3>
+
+<div class="halfwidth">
+    <table>
+
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.CatName)</td>
+            <td>@Html.ActionLink("Take me there", "Content", new { id = item.CatID })</td>
+        </tr>
+}
+
+    </table>
+</div>

@@ -22,7 +22,9 @@ namespace CMS.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var startpage = db.SiteConfigs.First();
+            var startid = startpage.SiteStartCatID;
+            return RedirectToAction("Index", "Showcategory", new { id = startid});
         }
 
         [ChildActionOnly]
