@@ -42,6 +42,9 @@ namespace CMS.Controllers
         {
 
             ViewBag.CatID = id;
+            var category = db.Categories.First(c => c.CatID == id.Value);
+            ViewBag.CatName = category.CatName;
+                
             return View();
         }
 

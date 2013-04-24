@@ -4,13 +4,15 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create New Text</h2>
+<h2>Create New Text on page --> @ViewBag.CatName</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>Text</legend>
+
+        @Html.HiddenFor(model => model.CatID, new { @Value = ViewBag.CatID})
 
         <div class="editor-label">
             @Html.LabelFor(model => model.TextTitle, "Title")
@@ -34,14 +36,6 @@
         <div class="editor-field">
             @Html.EditorFor(model => model.TextPrio)
             @Html.ValidationMessageFor(model => model.TextPrio)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CatID, "Page")
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CatID, new { @Value = ViewBag.CatID})
-            @Html.ValidationMessageFor(model => model.CatID)
         </div>
 
         <p>
