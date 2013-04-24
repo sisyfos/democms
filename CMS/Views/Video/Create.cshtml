@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Add new video on page --> @ViewBag.CatName</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -12,8 +12,10 @@
     <fieldset>
         <legend>Video</legend>
 
+        @Html.HiddenFor(model => model.CatID, new { @Value = ViewBag.CatID})
+
         <div class="editor-label">
-            @Html.LabelFor(model => model.VidTitle)
+            @Html.LabelFor(model => model.VidTitle, "Title")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.VidTitle)
@@ -21,7 +23,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.VidUrl)
+            @Html.LabelFor(model => model.VidUrl, "URL")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.VidUrl)
@@ -29,7 +31,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.VidDesc)
+            @Html.LabelFor(model => model.VidDesc, "Description")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.VidDesc)
@@ -37,19 +39,11 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.VidPrio)
+            @Html.LabelFor(model => model.VidPrio, "Priority")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.VidPrio)
             @Html.ValidationMessageFor(model => model.VidPrio)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CatID, "Category")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("CatID", String.Empty)
-            @Html.ValidationMessageFor(model => model.CatID)
         </div>
 
         <p>
