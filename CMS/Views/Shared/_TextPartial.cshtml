@@ -4,9 +4,18 @@
     ViewBag.Title = "_TextPartial";
 }
 
-<h2>@Model.TextTitle</h2>
+<h3>@Model.TextTitle</h3>
+
 <div>
-<p>@Model.TextData
-</p>
+    <p>@Model.TextData</p>
+    <p>
+        @if (Request.IsAuthenticated) {
+        <text>
+            @Html.ActionLink("Edit", "Edit", "Text", new { id = Model.TextID }, string.Empty) |
+            @Html.ActionLink("Details", "Details", "Text", new { id = Model.TextID }, string.Empty) |
+            @Html.ActionLink("Delete", "Delete", "Text", new { id = Model.TextID }, string.Empty)
+        </text>
+        }
+    </p>
 </div>
 

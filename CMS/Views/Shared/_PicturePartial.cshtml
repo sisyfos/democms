@@ -4,7 +4,16 @@
     ViewBag.Title = "_PicturePartial";
 }
 
-<h2>@Model.PicTitle</h2>
+<h3>@Model.PicTitle</h3>
 <div>
-<img src="@Model.PicUrl" alt="@Model.PicAltText" />
+    <img src="@Model.PicUrl" alt="@Model.PicAltText" />
+    <p>
+        @if (Request.IsAuthenticated) {
+        <text>
+            @Html.ActionLink("Edit", "Edit", "Picture", new { id = Model.PicID }, string.Empty) |
+            @Html.ActionLink("Details", "Details", "Picture", new { id = Model.PicID }, string.Empty) |
+            @Html.ActionLink("Delete", "Delete", "Picture", new { id = Model.PicID }, string.Empty)
+        </text>
+        }
+    </p>
 </div>
