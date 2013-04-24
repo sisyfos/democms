@@ -4,6 +4,18 @@
     ViewBag.Title = "_LinkPartial";
 }
 
-<h2>@Model.LinkTitle</h2>
-<a href="@Model.LinkUrl">@Model.LinkText</a>
+<h3>@Model.LinkTitle</h3>
+<div>
+    <a href="@Model.LinkUrl">@Model.LinkText</a>
+    <p>
+         @if (Request.IsAuthenticated) {
+        <text>
+            @Html.ActionLink("Edit", "Edit", "Link", new { id = Model.LinkID }, string.Empty) |
+            @Html.ActionLink("Details", "Details", "Link", new { id = Model.LinkID }, string.Empty) |
+            @Html.ActionLink("Delete", "Delete", "Link", new { id = Model.LinkID }, string.Empty)
+        </text>
+        }
+    </p>
+</div>
+
 
