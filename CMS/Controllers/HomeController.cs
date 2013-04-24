@@ -78,11 +78,11 @@ namespace CMS.Controllers
         {
             if (ModelState.IsValid)
             {
-                string fileName = Guid.NewGuid().ToString();
+                string fileName = ShortGuid.NewGuid().ToString();
                 string serverPath = Server.MapPath("~");
                 string imagesPath = serverPath + "/images_upload";
-                string thumbPath = imagesPath + "/images_upload";
-                string fullPath = imagesPath + "/images_upload";
+                string thumbPath = imagesPath + "/";
+                string fullPath = imagesPath + "/";
                 ImageModel.ResizeAndSave(thumbPath, fileName, model.ImageUploaded.InputStream, 80, true);
                 ImageModel.ResizeAndSave(fullPath, fileName, model.ImageUploaded.InputStream, 600, true);
             }
