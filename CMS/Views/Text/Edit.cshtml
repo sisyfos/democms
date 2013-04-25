@@ -15,7 +15,7 @@
         @Html.HiddenFor(model => model.TextID)
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.TextTitle)
+            @Html.LabelFor(model => model.TextTitle, "Title")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.TextTitle)
@@ -23,7 +23,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.TextData)
+            @Html.LabelFor(model => model.TextData, "Text")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.TextData)
@@ -31,7 +31,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.TextPrio)
+            @Html.LabelFor(model => model.TextPrio, "Priority")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.TextPrio)
@@ -39,7 +39,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CatID, "Category")
+            @Html.LabelFor(model => model.CatID, "Page")
         </div>
         <div class="editor-field">
             @Html.DropDownList("CatID", String.Empty)
