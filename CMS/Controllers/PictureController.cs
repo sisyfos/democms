@@ -58,7 +58,7 @@ namespace CMS.Controllers
             {
                 db.Pictures.AddObject(picture);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content", "Admin", new { id = picture.CatID });
             }
 
             ViewBag.CatID = new SelectList(db.Categories, "CatID", "CatName", picture.CatID);
@@ -90,7 +90,7 @@ namespace CMS.Controllers
                 db.Pictures.Attach(picture);
                 db.ObjectStateManager.ChangeObjectState(picture, EntityState.Modified);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content", "Admin", new { id = picture.CatID });
             }
             ViewBag.CatID = new SelectList(db.Categories, "CatID", "CatName", picture.CatID);
             return View(picture);
@@ -118,7 +118,7 @@ namespace CMS.Controllers
             Picture picture = db.Pictures.Single(p => p.PicID == id);
             db.Pictures.DeleteObject(picture);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content", "Admin", new { id = picture.CatID });
         }
 
         protected override void Dispose(bool disposing)

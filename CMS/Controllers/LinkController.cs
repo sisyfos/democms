@@ -58,7 +58,7 @@ namespace CMS.Controllers
             {
                 db.Links.AddObject(link);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content", "Admin", new { id = link.CatID });
             }
 
             ViewBag.CatID = new SelectList(db.Categories, "CatID", "CatName", link.CatID);
@@ -90,7 +90,7 @@ namespace CMS.Controllers
                 db.Links.Attach(link);
                 db.ObjectStateManager.ChangeObjectState(link, EntityState.Modified);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content", "Admin", new { id = link.CatID });
             }
             ViewBag.CatID = new SelectList(db.Categories, "CatID", "CatName", link.CatID);
             return View(link);
@@ -118,7 +118,7 @@ namespace CMS.Controllers
             Link link = db.Links.Single(l => l.LinkID == id);
             db.Links.DeleteObject(link);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content", "Admin", new { id = link.CatID });
         }
 
         protected override void Dispose(bool disposing)

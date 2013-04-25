@@ -60,7 +60,7 @@ namespace CMS.Controllers
                 video.VidUrl = HttpUtility.ParseQueryString(uri.Query).Get("v");                
                 db.Videos.AddObject(video);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content", "Admin", new { id = video.CatID });
             }
 
             ViewBag.CatID = new SelectList(db.Categories, "CatID", "CatName", video.CatID);
@@ -96,7 +96,7 @@ namespace CMS.Controllers
                 db.Videos.Attach(video);
                 db.ObjectStateManager.ChangeObjectState(video, EntityState.Modified);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Content", "Admin", new { id = video.CatID });
             }
             ViewBag.CatID = new SelectList(db.Categories, "CatID", "CatName", video.CatID);
             return View(video);
@@ -124,7 +124,7 @@ namespace CMS.Controllers
             Video video = db.Videos.Single(v => v.VidID == id);
             db.Videos.DeleteObject(video);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Content", "Admin", new { id = video.CatID });
         }
 
         protected override void Dispose(bool disposing)
