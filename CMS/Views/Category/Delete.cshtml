@@ -4,39 +4,27 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Delete --> @Html.DisplayFor(model => model.CatName)</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
     <legend>Category</legend>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.CatName)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.CatName)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.CatPrio)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.CatPrio)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.CatDesc)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.CatDesc)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Template.TempName)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Template.TempName)
-    </div>
+    <section>
+        <div class="display-label">
+             <h5>@Html.DisplayNameFor(model => model.CatName)</h5>
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CatName)
+        </div>
+    </section>
+    <section>
+        <div class="display-label">
+         <h5>@Html.DisplayNameFor(model => model.CatDesc)</h5>
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CatDesc)
+        </div>    
+    </section>
 </fieldset>
 @using (Html.BeginForm()) {
     <p>

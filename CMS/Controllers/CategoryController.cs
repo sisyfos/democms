@@ -114,7 +114,7 @@ namespace CMS.Controllers
             Category category = db.Categories.Single(c => c.CatID == id);
             db.Categories.DeleteObject(category);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Page", "Admin");
         }
 
         protected override void Dispose(bool disposing)

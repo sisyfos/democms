@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit Page --> @Html.DisplayFor(model => model.CatName)</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -15,7 +15,7 @@
         @Html.HiddenFor(model => model.CatID)
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CatName)
+            @Html.LabelFor(model => model.CatName, "Page name")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.CatName)
@@ -23,7 +23,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CatPrio)
+            @Html.LabelFor(model => model.CatPrio, "Priority")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.CatPrio)
@@ -31,7 +31,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CatDesc)
+            @Html.LabelFor(model => model.CatDesc, "Description")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.CatDesc)
