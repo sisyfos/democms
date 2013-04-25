@@ -10,9 +10,8 @@
 }
 
 <section class="content-wrapper">
-    <h3>Add or edit content on: @Html.DisplayFor(model => model.CatName)</h3>
-    <fieldset class="halfwidth">
-        <legend>Text content</legend>
+    <h3>Add content on: @Html.DisplayFor(model => model.CatName)</h3>
+    <div class="halfwidth">
 
         <div class="editor-label">
             <label>Submit new content</label>
@@ -23,7 +22,11 @@
             <button>@Html.ActionLink("Video", "Create", "Video", new { id = Model.CatID }, string.Empty)</button>
             <button>@Html.ActionLink("Link", "Create", "Link", new { id = Model.CatID }, string.Empty)</button>
         </p>
-    </fieldset>
+    </div>
+
+<hr class="clear"/>
+
+<h3>Edit TEXT on: @Html.DisplayFor(model => model.CatName)</h3>
 
 @foreach (var text in Model.Texts)
 {
@@ -31,17 +34,30 @@
     @Html.Partial("_AdminTextPartial", text)
 }
 
+<hr class="clear"/>
+
+<h3>Edit PICTURE on: @Html.DisplayFor(model => model.CatName)</h3>
+
+
 @foreach (var picture in Model.Pictures)
 {
     
     @Html.Partial("_AdminPicturePartial", picture)
 }
 
+<hr class="clear"/>
+
+<h3>Edit VIDEO on: @Html.DisplayFor(model => model.CatName)</h3>
+
 @foreach (var video in Model.Videos)
 {
     
     @Html.Partial("_AdminVideoPartial", video)
 }
+
+<hr class="clear"/>
+
+<h3>Edit LINK on: @Html.DisplayFor(model => model.CatName)</h3>
 
 @foreach (var link in Model.Links)
 {

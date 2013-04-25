@@ -243,6 +243,7 @@
     <Content Include="bin\WebMatrix.Data.xml" />
     <Content Include="bin\WebMatrix.WebData.dll" />
     <Content Include="bin\WebMatrix.WebData.xml" />
+    <Content Include="Content\Blue.css" />
     <Content Include="Content\Red.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -298,6 +299,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\Yellow.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="images_upload\images_upload0d1d6547-c531-4785-a18b-f5b956e121bd.JPG" />
@@ -306,8 +308,11 @@
     <Content Include="images_upload\images_upload65c79587-5ba3-4bde-b48f-ee869a7a6afd.JPG" />
     <Content Include="images_upload\images_upload932fd416-2db4-481d-85fa-a67660440553.JPG" />
     <Content Include="images_upload\images_uploada3a982fe-c09e-4cf4-ba25-5868da14dadb.JPG" />
+    <Content Include="images_upload\images_uploadae645cba-f33f-42c6-bc4f-ffcfaede977c.JPG" />
     <Content Include="images_upload\images_uploadaqnm9TlC0Uyvzkr6HpYRUg.JPG" />
     <Content Include="images_upload\images_uploadf86a3ff8-05bb-478d-a7f9-4e7b8265bfe8.JPG" />
+    <Content Include="images_upload\rF1VK3btVEyLhzy0erMbzQ.JPG" />
+    <Content Include="images_upload\xFWCUf7mmkqBfAfSjkrs8A.JPG" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />

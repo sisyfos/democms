@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.PicTitle)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PicUrl)
+            
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PicAltText)
@@ -38,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.PicTitle)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PicUrl)
+            <img src="@item.PicUrl" alt="@item.PicAltText" width="20%" height="20%" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PicAltText)
