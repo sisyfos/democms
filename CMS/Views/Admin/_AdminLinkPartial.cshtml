@@ -4,16 +4,16 @@
         <legend>Link content</legend>
 
         <div class="editor-label">
-            <label>Link title</label>
+            <label>Link text --> @Html.DisplayFor(model => model.LinkText)</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.LinkText)
             </div>
         <div class="editor-label">
-            <label>Link URL</label>
+            <label>URL</label>
         </div>
         <div class="editor-field">
-            @Html.TextAreaFor(model => model.LinkUrl)
+            @Html.EditorFor(model => model.LinkUrl)
         </div>
 
         <p>

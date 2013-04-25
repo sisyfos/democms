@@ -4,13 +4,13 @@
         <legend>Text content</legend>
 
         <div class="editor-label">
-            <label>Text title</label>
+            <label>Title --> @Html.DisplayFor(model => model.TextTitle)</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.TextTitle)
             </div>
         <div class="editor-label">
-            <label>Text content</label>
+            <label>Content</label>
         </div>
         <div class="editor-field">
             @Html.TextAreaFor(model => model.TextData)

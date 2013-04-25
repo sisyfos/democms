@@ -5,11 +5,9 @@
     <fieldset class="halfwidth">
         <legend>Edit an existing page</legend>
         <div class="editor-label">
-        <label>Work with this page: </label>
+        <label>Work with page -->  @Html.DisplayFor(modelItem => item.CatName) </label>
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(modelItem => item.CatName)
-        </div>
+        
         <p>
         <button>@Html.ActionLink("Edit", "Edit", "Category", new { id = item.CatID }, string.Empty)</button>
         <button>@Html.ActionLink("Details", "Details", "Category", new { id = item.CatID }, string.Empty)</button>

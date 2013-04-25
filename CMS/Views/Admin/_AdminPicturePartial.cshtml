@@ -4,7 +4,7 @@
         <legend>Picture content</legend>
 
         <div class="editor-label">
-            <label>Picture title</label>
+            <label>Title --> @Html.DisplayFor(model => model.PicTitle)</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.PicTitle)
@@ -13,9 +13,11 @@
             <label>Picture descriprion</label>
         </div>
         <div class="editor-field">
-            @Html.TextAreaFor(model => model.PicDesc)
+            @Html.EditorFor(model => model.PicDesc)
         </div>
-
+        <div class="editor-field">
+            <img src="@Model.PicUrl" alt="@Model.PicAltText" width="20%" height="20%" />
+        </div>
         <p>
             <button>@Html.ActionLink("Edit", "Edit", "Picture", new { id = Model.PicID }, string.Empty)</button>
             <button>@Html.ActionLink("Details", "Details", "Picture", new { id = Model.PicID }, string.Empty)</button>
