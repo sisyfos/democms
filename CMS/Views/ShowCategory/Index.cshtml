@@ -8,7 +8,7 @@
     ViewBag.Title = "Index";
 }
 <div class="bigwrap">
-<h1>@Html.DisplayFor(model => model.CatName)</h1>
+<h1 class="fix-margin">@Html.DisplayFor(model => model.CatName)</h1>
 <p>@Html.DisplayFor(model => model.CatDesc)</p>
 
 @foreach (var video in Model.Videos)
