@@ -46,6 +46,10 @@ mark {
     float: left;
 }
 
+.clear-float 
+{
+    clear: both;    
+}
 .float-right {
     float: right;
 }
@@ -105,13 +109,13 @@ h5, h6 {
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
+        /* background: url("../Images/accent.png") no-repeat; */
         padding-left: 10px;
         padding-top: 30px;
     }
 
     .featured + .main-content {
-        background: url("../Images/heroAccent.png") no-repeat;
+        /*background: url("../Images/heroAccent.png") no-repeat;*/
     }
 
 header .content-wrapper {
@@ -194,14 +198,14 @@ ul#menu {
     }
 
         ul#menu li a {
-            background: none;
+            /*background: none;
             color: #999;
-            text-decoration: none;
+            text-decoration: none;*/
         }
 
         ul#menu li a:hover {
-            color: #333;
-            text-decoration: none;
+            /*color: #333;
+            text-decoration: none;*/
         }
 
 

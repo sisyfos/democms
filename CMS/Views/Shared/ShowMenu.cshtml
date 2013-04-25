@@ -8,6 +8,6 @@
 
 @foreach (var item in Model)
 {
-    <li><a href="/ShowCategory/index/@Html.DisplayFor(modelItem => item.CatID)">@Html.DisplayFor(modelItem => item.CatName)</a></li>
+    <li><a href="/ShowCategory/index/@Html.DisplayFor(modelItem => item.CatID)" class="purelycss_elegance_button align_left color_steelblue hover_teal">@Html.DisplayFor(modelItem => item.CatName)</a></li>
 }
 </ul>

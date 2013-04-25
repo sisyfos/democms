@@ -4,7 +4,26 @@
     ViewBag.Title = "_LinkPartial";
 }
 
-<h3>@Model.LinkTitle</h3>
+<div class="wrap float-left">    
+<h1>@Model.LinkTitle</h1>
+    <br />
+        <p>
+         <a class="purelycss_elegance_button align_left color_teal hover_black size_large" href="@Model.LinkUrl">
+         @Model.LinkText
+         </a>
+       </p>
+       @if (Request.IsAuthenticated) {
+        <text>
+            @Html.ActionLink("Edit", "Edit", "Link", new { id = Model.LinkID }, string.Empty) |
+            @Html.ActionLink("Details", "Details", "Link", new { id = Model.LinkID }, string.Empty) |
+            @Html.ActionLink("Delete", "Delete", "Link", new { id = Model.LinkID }, string.Empty)
+        </text>
+        } 
+       <br />
+              
+</div>
+<span class="clear-float"></span>
+@*<h3>@Model.LinkTitle</h3>
 <div>
     <a href="@Model.LinkUrl">@Model.LinkText</a>
     <p>
@@ -19,3 +38,4 @@
 </div>
 
 
+*@

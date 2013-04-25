@@ -7,9 +7,9 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>@Html.DisplayFor(model => model.CatName)</h2>
-<h3>@Html.DisplayFor(model => model.CatDesc)</h3>
+<div class="bigwrap">
+<h1>@Html.DisplayFor(model => model.CatName)</h1>
+<p>@Html.DisplayFor(model => model.CatDesc)</p>
 
 @foreach (var video in Model.Videos)
 {
@@ -33,3 +33,4 @@
     
     @Html.Partial("_PicturePartial", picture)
 }
+</div>
