@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Details";
 }
-
+  <div class="content">
+    <div class="innercontent">
 <h2>Details</h2>
 
 <fieldset>
@@ -36,8 +37,7 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.Template.TempName)
     </div>
+        <button>@Html.ActionLink("Back to List", "Page", "Admin")</button>
+        <button>@Html.ActionLink("Edit", "Edit", new { id=Model.CatID })</button>
 </fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.CatID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</div></div>

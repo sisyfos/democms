@@ -243,8 +243,6 @@
     <Content Include="bin\WebMatrix.Data.xml" />
     <Content Include="bin\WebMatrix.WebData.dll" />
     <Content Include="bin\WebMatrix.WebData.xml" />
-    <Content Include="Content\Blue.css" />
-    <Content Include="Content\Red.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -299,7 +297,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Content\Yellow.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="images_upload\images_upload0d1d6547-c531-4785-a18b-f5b956e121bd.JPG" />

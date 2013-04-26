@@ -3,7 +3,7 @@
 @using (Html.BeginForm("CreatePage", "Admin")) {
     @Html.ValidationSummary(true)
 
-    <fieldset class="halfwidth">
+    <fieldset>
         <legend>Create new page</legend>
 
         <div class="editor-label">
@@ -13,10 +13,9 @@
             @Html.EditorFor(model => model.CatName)
             @Html.ValidationMessageFor(model => model.CatName)
         </div>
-
-        <p>
+        <div class="inputver">
             <input type="submit" value="Create" />
-        </p>
+            </div>
     </fieldset>
 }
 

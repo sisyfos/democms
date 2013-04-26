@@ -12,6 +12,7 @@
 
     <fieldset>
         <legend>Text</legend>
+        @Html.HiddenFor(model => model.CatID, new { @Value = ViewBag.CatID})
             @Html.LabelFor(model => model.TextTitle)
             @Html.EditorFor(model => model.TextTitle)
             @Html.ValidationMessageFor(model => model.TextTitle)
@@ -23,9 +24,6 @@
             @Html.LabelFor(model => model.TextPrio)
             @Html.EditorFor(model => model.TextPrio)
             @Html.ValidationMessageFor(model => model.TextPrio)
-            @Html.LabelFor(model => model.CatID, "Category")
-            @Html.DropDownList("CatID", String.Empty)
-            @Html.ValidationMessageFor(model => model.CatID)
             <input type="submit" value="Create" />
     </fieldset>
         <button>@Html.ActionLink("Back to List", "Index")</button>

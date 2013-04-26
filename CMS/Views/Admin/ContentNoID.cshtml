@@ -9,11 +9,13 @@
     @Html.Partial("_AdminHeaderPartial")
 }
 
-<h3>Add or edit content on a page</h3>
+  <div class="content">
+    <div class="innercontent">
 
-<div class="halfwidth">
+
+
     <table>
-
+    
 @foreach (var item in Model)
 {
         <tr>
@@ -23,4 +25,4 @@
 }
 
     </table>
-</div>
+</div></div>

@@ -12,7 +12,7 @@
 
     <fieldset>
         <legend>Picture</legend>
-
+        @Html.HiddenFor(model => model.CatID, new { @Value = ViewBag.CatID})
             @Html.LabelFor(model => model.PicTitle)
             @Html.EditorFor(model => model.PicTitle)
             @Html.ValidationMessageFor(model => model.PicTitle)
@@ -29,9 +29,6 @@
             @Html.LabelFor(model => model.PicPrio)
             @Html.EditorFor(model => model.PicPrio)
             @Html.ValidationMessageFor(model => model.PicPrio)
-            @Html.LabelFor(model => model.CatID, "Category")
-            @Html.DropDownList("CatID", String.Empty)
-            @Html.ValidationMessageFor(model => model.CatID)
             <input type="submit" value="Create" />
     </fieldset>
 }

@@ -4,18 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+  <div class="content">
+    <div class="innercontent">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
+
 <table>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.TempName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TempDesc)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TempURL)
@@ -29,9 +26,6 @@
             @Html.DisplayFor(modelItem => item.TempName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TempDesc)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.TempURL)
         </td>
         <td>
@@ -41,5 +35,7 @@
         </td>
     </tr>
 }
-
 </table>
+    <button>@Html.ActionLink("Create New", "Create")</button>
+
+</div></div>

@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+  <div class="content">
+    <div class="innercontent">
 <h2>Edit Page --> @Html.DisplayFor(model => model.CatName)</h2>
 
 @using (Html.BeginForm()) {
@@ -45,17 +46,18 @@
             @Html.DropDownList("TempID", String.Empty)
             @Html.ValidationMessageFor(model => model.TempID)
         </div>
-
-        <p>
+           @using (Html.BeginForm())
+           {
+        <div class="centerbutton">
             <input type="submit" value="Save" />
-        </p>
+            <button>@Html.ActionLink("Back to List", "Index", "Template")</button>
+        </div>
+           }
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+</div></div>

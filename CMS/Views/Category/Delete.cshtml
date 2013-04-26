@@ -3,32 +3,33 @@
 @{
     ViewBag.Title = "Delete";
 }
-
+  <div class="content">
+    <div class="innercontent">
 <h2>Delete --> @Html.DisplayFor(model => model.CatName)</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
     <legend>Category</legend>
-    <section>
+
         <div class="display-label">
-             <h5>@Html.DisplayNameFor(model => model.CatName)</h5>
+         @Html.DisplayNameFor(model => model.CatName)
         </div>
         <div class="display-field">
             @Html.DisplayFor(model => model.CatName)
         </div>
-    </section>
-    <section>
+
         <div class="display-label">
-         <h5>@Html.DisplayNameFor(model => model.CatDesc)</h5>
+       @Html.DisplayNameFor(model => model.CatDesc)
         </div>
         <div class="display-field">
             @Html.DisplayFor(model => model.CatDesc)
         </div>    
-    </section>
-</fieldset>
-@using (Html.BeginForm()) {
-    <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+     
+    <div class="centerbutton">
+        <input type="submit" value="Delete" />
+        <button>@Html.ActionLink("Back to List", "Page", "Admin")</button>
+    </div>
 }
+</fieldset>
+
+</div>

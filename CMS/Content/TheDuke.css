@@ -211,7 +211,24 @@ menu ul li ul li a:hover
     margin-left:250px;
     margin-top:-40px;
 }
+.back 
+{
+    margin-top:-50px;
+    margin-right:1px;
+}
 
+.buttonbottomleft
+{
+    float:left;
+    margin-top:-20px;
+}
+
+
+h3 a, .innercontent a
+{
+   text-decoration:underline;
+    color:#ccc; 
+}
 iframe, img
 {
     float:left;

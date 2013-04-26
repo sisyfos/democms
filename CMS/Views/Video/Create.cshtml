@@ -12,7 +12,7 @@
 
     <fieldset>
         <legend>Video</legend>
-
+        @Html.HiddenFor(model => model.CatID, new { @Value = ViewBag.CatID})
             @Html.LabelFor(model => model.VidTitle)
 
             @Html.EditorFor(model => model.VidTitle)
@@ -32,11 +32,6 @@
 
             @Html.EditorFor(model => model.VidPrio)
             @Html.ValidationMessageFor(model => model.VidPrio)
-
-            @Html.LabelFor(model => model.CatID, "Category")
-
-            @Html.DropDownList("CatID", String.Empty)
-            @Html.ValidationMessageFor(model => model.CatID)
     
 
      

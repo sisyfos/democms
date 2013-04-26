@@ -9,21 +9,20 @@
     @Html.Partial("_AdminHeaderPartial")
 }
 
-<section class="content">
-    <h3>Add content on: @Html.DisplayFor(model => model.CatName)</h3>
-    <div class="halfwidth">
-
-        <div class="editor-label">
-            <label>Submit new content</label>
-        </div>
-        <p>
+  <div class="content">
+    <div class="innercontent">
+    
+  
+  <div class="buttonbottomleft">
+  <h2>Add content on: @Html.DisplayFor(model => model.CatName)</h2>
             <button>@Html.ActionLink("Text", "Create", "Text", new { id = Model.CatID }, string.Empty)</button>
             <button>@Html.ActionLink("Picture", "Create", "Picture", new { id = Model.CatID }, string.Empty)</button>
             <button>@Html.ActionLink("Video", "Create", "Video", new { id = Model.CatID }, string.Empty)</button>
             <button>@Html.ActionLink("Link", "Create", "Link", new { id = Model.CatID }, string.Empty)</button>
-        </p>
-    </div>
+</div></div></div>
 
+ <div class="content">
+    <div class="innercontent">
 <hr class="clear"/>
 
 <h3>Edit TEXT on: @Html.DisplayFor(model => model.CatName)</h3>
@@ -64,4 +63,4 @@
     
     @Html.Partial("_AdminLinkPartial", link)
 }
-</section>
+</div></div>

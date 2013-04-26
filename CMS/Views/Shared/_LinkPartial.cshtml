@@ -3,14 +3,8 @@
 @{
     ViewBag.Title = "_LinkPartial";
 }
-
-<div class="wrap float-left">   
-    <br />
-        <p>
-         <a class="purelycss_elegance_button align_left color_teal hover_black size_large" href="@Model.LinkUrl">
-         @Model.LinkTitle
-         </a>
-       </p>
+ 
+<h3><a href="@Model.LinkUrl" target=_blank>@Model.LinkTitle</a></h3>
        @if (Request.IsAuthenticated) {
         <text>
             @Html.ActionLink("Edit", "Edit", "Link", new { id = Model.LinkID }, string.Empty) |
@@ -19,9 +13,7 @@
         </text>
         } 
        <br />
-              
-</div>
-<span class="clear-float"></span>
+    
 @*<h3>@Model.LinkTitle</h3>
 <div>
     <a href="@Model.LinkUrl">@Model.LinkText</a>
