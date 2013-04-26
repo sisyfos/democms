@@ -8,8 +8,8 @@
 @section featured {
     @Html.Partial("_AdminHeaderPartial")
 }
-
-<section class="content-wrapper">
+  <div class="content">
+    <div class="innercontent">
     <h3>Site configuration</h3>
 
 
@@ -17,7 +17,7 @@
 {
     @Html.ValidationSummary(true)
 
-    <fieldset class="halfwidth">
+    <fieldset>
         <legend>Configure your site</legend>
 
         @Html.HiddenFor(model => model.SiteConfigID, new { @Value = ViewBag.SiteConfigID})
@@ -45,10 +45,9 @@
             @Html.DropDownList("SiteStartCatID", "-- Make your pick --")
             @Html.ValidationMessageFor(model => model.SiteStartCatID)
         </div>
-
-        <p>
+        <div class="inputver">
             <input type="submit" value="Apply" />
-        </p>
+     </div>
     </fieldset>
 }
 
@@ -56,4 +55,4 @@
     @Scripts.Render("~/bundles/jqueryval")
 }
 
-</section>
+</div></div>

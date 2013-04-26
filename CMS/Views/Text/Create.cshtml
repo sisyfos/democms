@@ -3,51 +3,37 @@
 @{
     ViewBag.Title = "Create";
 }
-
-<h2>Add new text on page --> @ViewBag.CatName</h2>
+<div class="content">
+    <div class="innercontent">
+<h2>Create New Category</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>Text</legend>
-
-        @Html.HiddenFor(model => model.CatID, new { @Value = ViewBag.CatID})
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.TextTitle, "Title")
-        </div>
-        <div class="editor-field">
+            @Html.LabelFor(model => model.TextTitle)
             @Html.EditorFor(model => model.TextTitle)
             @Html.ValidationMessageFor(model => model.TextTitle)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.TextData, "Text")
-        </div>
-        <div class="editor-field">
-            @Html.TextAreaFor(model => model.TextData)
+            @Html.LabelFor(model => model.TextData)
+            @Html.EditorFor(model => model.TextData)
+            @*@Html.TextArea(model => model.TextData)*@
+            @*@Html.TextArea("TextData")*@
             @Html.ValidationMessageFor(model => model.TextData)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.TextPrio, "Text priority")
-        </div>
-        <div class="editor-field">
+            @Html.LabelFor(model => model.TextPrio)
             @Html.EditorFor(model => model.TextPrio)
             @Html.ValidationMessageFor(model => model.TextPrio)
-        </div>
-
-        <p>
+            @Html.LabelFor(model => model.CatID, "Category")
+            @Html.DropDownList("CatID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CatID)
             <input type="submit" value="Create" />
-        </p>
     </fieldset>
+        <button>@Html.ActionLink("Back to List", "Index")</button>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+</div></div>

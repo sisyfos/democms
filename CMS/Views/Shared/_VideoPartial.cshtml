@@ -4,14 +4,11 @@
     ViewBag.Title = "_VideoPartial";
 }
 
-
-<div class="wrap float-left">
-    <h1>@Model.VidTitle</h1>   
-            <p>
-         Video description: @Model.VidDesc
-       </p>
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/@Model.VidUrl" frameborder="0" allowfullscreen></iframe>   
-    <br />
+<div class="Grid">
+<iframe src="http://www.youtube.com/embed/@Model.VidUrl"><p>Your browser does not support iframes.</p></iframe>
+<article>
+<h4>@Model.VidTitle</h4>
+<p>@Model.VidDesc</p>
        @if (Request.IsAuthenticated) {
         <text>
             @Html.ActionLink("Edit", "Edit", "Video", new { id = Model.VidID }, string.Empty) |
@@ -19,8 +16,7 @@
             @Html.ActionLink("Delete", "Delete", "Video", new { id = Model.VidID }, string.Empty)
         </text>
         } 
-       <br />       
-</div>
+</article></div>
 
 @*<h3>@Model.VidTitle</h3>
 <div>

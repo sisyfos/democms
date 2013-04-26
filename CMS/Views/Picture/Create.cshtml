@@ -3,8 +3,9 @@
 @{
     ViewBag.Title = "Create";
 }
-
-<h2>Add new picture on page --> @ViewBag.CatName</h2>
+  <div class="content">
+    <div class="innercontent">
+<h2>Uppload your picture to the site</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -12,59 +13,36 @@
     <fieldset>
         <legend>Picture</legend>
 
-        @Html.HiddenFor(model => model.CatID, new { @Value = ViewBag.CatID})
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PicTitle, "Title")
-        </div>
-        <div class="editor-field">
+            @Html.LabelFor(model => model.PicTitle)
             @Html.EditorFor(model => model.PicTitle)
             @Html.ValidationMessageFor(model => model.PicTitle)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PicUrl, "URL")
-        </div>
-        <div class="editor-field">
+            @Html.LabelFor(model => model.PicUrl)
             <select id="PicUrl" name="PicUrl">
             @Html.Action("test", "Home")            
             </select>
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PicAltText, "Alternate text")
-        </div>
-        <div class="editor-field">
+            @Html.LabelFor(model => model.PicAltText)
             @Html.EditorFor(model => model.PicAltText)
             @Html.ValidationMessageFor(model => model.PicAltText)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PicDesc, "Description")
-        </div>
-        <div class="editor-field">
+            @Html.LabelFor(model => model.PicDesc)
             @Html.EditorFor(model => model.PicDesc)
             @Html.ValidationMessageFor(model => model.PicDesc)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PicPrio, "Priority")
-        </div>
-        <div class="editor-field">
+            @Html.LabelFor(model => model.PicPrio)
             @Html.EditorFor(model => model.PicPrio)
             @Html.ValidationMessageFor(model => model.PicPrio)
-        </div>
-
-        <p>
+            @Html.LabelFor(model => model.CatID, "Category")
+            @Html.DropDownList("CatID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CatID)
             <input type="submit" value="Create" />
-        </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
+    <button>@Html.ActionLink("Back to List", "Index")</button>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+</div>
+</div>

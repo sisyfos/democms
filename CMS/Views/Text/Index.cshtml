@@ -4,21 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="content">
+    <div class="innercontent">
 <table>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.TextTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TextData)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TextPrio)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Category.CatName)
@@ -32,12 +23,6 @@
             @Html.DisplayFor(modelItem => item.TextTitle)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TextData)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TextPrio)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Category.CatName)
         </td>
         <td>
@@ -49,3 +34,5 @@
 }
 
 </table>
+</div>
+</div>

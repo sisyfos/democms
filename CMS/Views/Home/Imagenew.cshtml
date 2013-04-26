@@ -1,4 +1,8 @@
 ﻿@model CMS.Controllers.ImageModel
+
+  <div class="content">
+    <div class="innercontent">
+    <div id="uppbild">
 @using (Html.BeginForm("Imagenew", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     
@@ -6,9 +10,12 @@
         <input name="ImageUploaded" type="file" title="Välj fil...">  
         <input type="submit" title="Ladda upp din fil här..">
     </form>  
-}
-
+}  
+    
     @foreach (var image in Model.Images)
     {
         <img src="@Url.Content(image)" alt="Pictures" height="100px" width="100px" />
     }
+    </div>
+    </div>
+    </div>

@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Details";
 }
+    <div class="content">
+    <div class="innercontent">
 
 <h2>Details</h2>
 
@@ -24,20 +26,14 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.TextPrio)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.TextPrio)
-    </div>
-
-    <div class="display-label">
          @Html.DisplayNameFor(model => model.Category.CatName)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Category.CatName)
     </div>
-</fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.TextID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+    <button>@Html.ActionLink("Edit", "Edit", new { id = Model.TextID })</button>
+    <button>@Html.ActionLink("Back to List", "Index")</button>
+    </fieldset>
+   </div>
+   </div>

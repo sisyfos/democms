@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+  <div class="content">
+    <div class="innercontent">
 <h2>Edit</h2>
 
 @using (Html.BeginForm()) {
@@ -53,17 +54,15 @@
             @Html.DropDownList("CatID", String.Empty)
             @Html.ValidationMessageFor(model => model.CatID)
         </div>
-
-        <p>
             <input type="submit" value="Save" />
-        </p>
+   
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <button>@Html.ActionLink("Back to List", "Index")</button>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+</div>
+</div>

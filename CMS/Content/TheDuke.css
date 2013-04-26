@@ -1,0 +1,673 @@
+﻿
+html
+{
+    background: url("../Images/wal1.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    color:#ccc;
+}
+
+header
+{
+    width:100%;
+    height:225px;
+}
+
+
+#title
+{
+    width:auto;
+    margin:0 auto;
+    float:none;
+}
+
+.site-title {
+    color: #c8c8c8;
+    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    font-size: 2.3em;
+    margin: 0;
+    text-align:center;
+    text-decoration:none; 
+    text-transform: uppercase;
+    font:34px/105px Trebuchet MS;
+}
+
+html p
+{
+    text-align:center;
+    margin-top:-15px;
+    margin-bottom:20px;
+}
+
+
+
+.site-title a, .site-title a:hover, .site-title a:active {
+    background: none;
+    color: #c8c8c8;
+    outline: none;
+    text-decoration: none;  
+}
+
+
+menu
+{
+    height:85px;
+    z-index:2;
+    margin:0 auto;
+    padding:0;
+    display:block;
+    position:relative;
+}
+
+
+menu ul
+{
+    -webkit-box-shadow: 0 2px 2px #090807;
+    -webkit-border-radius: 6px;
+    width:562px;
+    padding:0;
+    min-height:85px;
+    margin:0 auto;
+    color:#7C6F6D;
+    position:relative;
+    background: url("../Images/menu.png") no-repeat;
+}
+
+menu ul li
+{
+     position:relative;
+     margin:0 auto;
+     float:left;
+     list-style-type:none;
+}
+
+menu ul li a  
+{
+    display:block; 
+    padding: 0 40px;
+    border-left:1px solid #000; 
+    color:#7C6F6D; 
+    text-decoration:none; 
+    height:85px;
+    text-transform: uppercase;
+    font:17px/87px Trebuchet MS;
+}  
+
+menu ul li a:focus  
+{
+    outline:none; 
+    text-decoration:underline; 
+}  
+
+menu ul li:first-child a  
+{
+    border-left:none; 
+}  
+
+menu ul li.last a  
+{
+    border-right:none;
+}  
+
+menu ul li ul  
+{
+    display:none; 
+    width:100%;
+    height:auto; 
+    position:absolute; 
+    left:0; 
+    background:#6a6a6a; 
+}  
+
+menu li:hover ul 
+{ 
+    display:block; 
+}
+
+menu ul li ul li  
+{
+    float:none; 
+} 
+ 
+menu ul li ul li a  
+{
+    padding:0 10px; 
+    border-left:none; 
+    border-right:none; 
+    font-size:14px; 
+}
+
+menu ul li ul li a:hover 
+{ 
+    color:#eee;
+}
+
+.no-js menu ul li:hover ul
+{ 
+    display:block; 
+}
+
+.cssgradients menu li:hover 
+{
+    background-image:-moz-linear-gradient(0% 100px 90deg, #101010, #222); 
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#101010)); 
+}  
+.borderradius menu ul li ul  
+{
+    -moz-border-radius-bottomleft:4px; 
+    -moz-border-radius-bottomright:4px; 
+    -webkit-border-bottom-left-radius:4px; 
+    -webkit-border-bottom-right-radius:4px; 
+}
+  
+.boxshadow.rgba menu ul li ul  
+{
+    background-color:rgba(16,16,16,1);
+} 
+
+
+#layout
+{
+    
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    margin:-35px;
+    position:relative;
+    -webkit-opacity:90); 
+    -moz-opacity:0.9;
+    opacity:0.9;
+    z-index:1;
+}
+
+#layout p
+{
+    color:#ccc;
+}
+
+
+.content
+{
+    background-color:#101010 ;
+    -webkit-border-radius: 15px;
+    max-width:960px;
+    margin:0 auto;
+    position:relative;
+    overflow:auto;
+}
+
+.innercontent
+{
+    width:90%;
+    margin:0 auto;
+    overflow:auto;
+    margin-top:35px;
+}
+
+.inputver
+{
+    margin-left:250px;
+    margin-top:-40px;
+}
+
+iframe, img
+{
+    float:left;
+    margin-top:20px;
+    position:relative;
+    width:400px;
+    height:300px;
+    border:none;
+    padding:0;
+    -webkit-border-radius: 6px;
+    -webkit-box-shadow: 0 5px 22px #090807;
+}
+
+.Grid
+{
+    width:99%;
+    height:340px;
+    padding:0;
+}
+
+.Grid article 
+{
+    width:400px;
+    float:right;
+    margin-top:0;
+    
+}
+
+.Grid article p
+{
+    
+    font:14px Trebuchet MS;
+    text-align:left;
+}
+
+.Grid article h4
+{
+    
+    font:20px Trebuchet MS;  
+}
+
+.textpartial
+{
+    text-align:left;
+}
+
+h3 a
+{
+    color:#ccc;
+    text-decoration:underline:
+}
+
+
+.float-left {
+    float: left;
+    color:#000;
+}
+
+footer
+{
+    width:100%;
+    height:60px;
+}
+
+/*--------------------------------------admin config-------------*/
+
+.config
+{
+    list-style-type:none;
+}
+
+.config h5 
+{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.indent
+{
+    text-indent:20px;
+}
+
+.innercontent ol li a
+{
+    color:#ccc;
+}
+
+.innercontent h3
+{
+    margin-left:20px;
+}
+
+fieldset {
+    border: none;
+    padding:0;
+    margin-left:40px;
+    margin-bottom:15px;
+}
+
+fieldset legend 
+{
+        display: none;
+}
+
+fieldset ol 
+{
+    padding: 0;
+    list-style: none;
+}
+
+fieldset ol li
+{
+    padding-bottom: 5px;
+}
+
+label 
+{
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding:10px 0;
+}
+
+fieldset button 
+{
+    margin:-2px;
+}
+
+fieldset button a
+{
+    text-decoration:none;
+    color:#333;
+   
+}
+
+.hover :hover
+{
+    background-image:-moz-linear-gradient(0% 100px 90deg, #101010, #222); 
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#101010)); 
+    color:#ccc;
+}
+
+.linkconfig a
+{
+    color:#ccc;
+    text-decoration:underline;
+}
+
+label.checkbox {
+    display: inline;
+}
+
+input, select, textarea
+{
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;   
+    padding: 5px;
+    width: 200px;
+}
+
+.innercontent button
+{
+    float:right;
+    margin-bottom:10px;
+}
+
+.innercontent button:hover
+{
+    background-image:-moz-linear-gradient(0% 100px 90deg, #101010, #222); 
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#101010)); 
+}
+
+.innercontent button:hover > a
+{
+    color:#ccc;
+}
+
+.innercontent button a
+{
+    text-decoration:none;
+    color:#333;
+}
+
+fieldset input:hover, fieldset button:hover, fieldset button a:hover
+{
+    color:#ccc;
+    background-image:-moz-linear-gradient(0% 100px 90deg, #101010, #222); 
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#101010));
+}
+
+.display-label
+{
+    text-decoration:underline;
+    padding:5px 0;
+}
+
+    input[type="checkbox"] {
+        background: transparent;
+        border: inherit;
+        width: auto;
+    }
+
+    input[type="submit"],
+    input[type="button"],
+    button {
+        background-color: #d3dce0;
+        border: 1px solid #787878;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 7px;
+        margin-right: 8px;
+        width: auto;
+    }
+
+    td input[type="submit"],
+    td input[type="button"],
+    td button {
+        font-size: 1em;
+        padding: 4px;
+        margin-right: 4px;
+    }
+
+
+/* login
+----------------------------------------------------------*/
+#login {
+    display: block;
+    font-size: .85em;
+    margin: 0 0 10px;
+    text-align: right;
+}
+
+    #login a 
+    {
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+        color:#ccc;
+        -webkit-transition: -webkit-transform 0.5s ease;
+        -moz-transition: -moz-transform 0.5s ease;
+        transition: transform 0.5s ease;
+    }
+    
+    #login  a:hover
+    {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        transform: scale(1.25);
+    }
+
+    #login a.username {
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #login ul {
+        margin: 0;
+    }
+
+    #login li {
+        display: inline;
+        list-style: none;
+    }
+    
+    .hidden
+    {
+        display:none;
+    }
+
+
+
+/* login page */
+#loginForm {
+    border-right: solid 2px #c8c8c8;
+    float: left;
+    width: 55%;
+}
+
+    #loginForm .validation-error {
+        display: block;
+        margin-left: 15px;
+    }
+
+    #loginForm .validation-summary-errors ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #loginForm .validation-summary-errors li {
+        display: inline;
+        list-style: none;
+        margin: 0;
+    }
+
+    #loginForm input {
+        width: 250px;
+    }
+
+    #loginForm input[type="checkbox"],
+    #loginForm input[type="submit"],
+    #loginForm input[type="button"],
+    #loginForm button {
+        width: auto;
+    }
+
+#socialLoginForm {
+    margin-left: 40px;
+    float: left;
+    width: 40%;
+}
+
+    #socialLoginForm h2 {
+        margin-bottom:  5px;
+    }
+
+#socialLoginList button {
+    margin-bottom: 12px;
+}
+
+#logoutForm {
+    display: inline;
+}
+
+
+
+/* info and errors */
+.message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+.message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.error {
+    color: #e80c4d;
+}
+
+
+/* tables
+----------------------------------------------------------*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0.75em;
+    border: 0 none;
+    margin-bottom:20px;
+}
+
+th {
+    font-size: 1.2em;
+    text-align: left;
+    padding: 0.25em 2em 0.25em 0em;
+}
+
+    th a {
+        display: block;
+        position: relative;
+    }
+
+    th a:link, th a:visited, th a:active, th a:hover {
+        color: #333;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    th a:hover {
+        color: #000;
+    }
+
+    th.asc a, th.desc a {
+        margin-right: .75em;
+    }
+
+    th.asc a:after, th.desc a:after {
+        display: block;
+        position: absolute;
+        right: 0em;
+        top: 0;
+        font-size: 0.75em;
+    }
+
+    th.asc a:after {
+        content: '▲';
+    }
+
+    th.desc a:after {
+        content: '▼';
+    }
+
+td {
+    padding: 0.25em 2em 0.25em 0em;
+    border-bottom: 1px solid #ccc;
+}
+
+td a
+{
+    color:#ccc;
+}
+
+tr.pager td {
+    padding: 0 0.25em 0 0;
+}
+
+video
+{
+    width:300px;
+    height:300px;
+    display:block;
+}
+
+.display-label
+{
+    font-size:18px;
+    margin-bottom:3px;
+}
+.display-fielddelete
+{
+    margin-bottom:13px;
+}
+
+#uppbild 
+{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+#uppbild input
+{
+    margin-top:20px;
+}
+#uppbild img
+{
+    width:250px;
+    height:200px;
+    float:left;
+    margin-right:35px;
+    margin-bottom:10px;
+}

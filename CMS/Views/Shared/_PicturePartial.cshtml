@@ -5,13 +5,11 @@
 }
 
 
-<div class="wrap float-left">
-    @*<h1>@Model.PicTitle</h1>*@   
-       <img src="@Model.PicUrl" alt="@Model.PicAltText" />
-        <p>
-         @Model.PicDesc
-       </p>       
-       <br />
+<div class="Grid">
+<img src="@Model.PicUrl" alt="" />
+<article>
+<h4>@Model.PicTitle</h4>
+<p>@Model.PicDesc</p>
        @if (Request.IsAuthenticated) {
         <text>
             @Html.ActionLink("Edit", "Edit", "Picture", new { id = Model.PicID }, string.Empty) |
@@ -19,6 +17,7 @@
             @Html.ActionLink("Delete", "Delete", "Picture", new { id = Model.PicID }, string.Empty)
         </text>
         }
+</article>
 </div>
 
 @*<h3>@Model.PicTitle</h3>

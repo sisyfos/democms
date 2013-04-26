@@ -5,46 +5,29 @@
         <title>@ViewBag.Title</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        <link href="~/Content/Site.css" rel="stylesheet" />      
+        <link href="~/Content/TheDuke.css" rel="stylesheet" />      
         @RenderSection("css", required: false)
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.Action("SiteInfo", "Home")</p>
-                </div>
-                <div class="float-right">
+              <header>
+        <div class="float-login">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>                        
                 </div>
-                <div class="float-center">
-                    <hgroup class="title">
-                        <h2>@ViewBag.Message</h2>
-                    </hgroup>
-                </div>
-              <nav>
+            <div id="title"><p class="site-title">@Html.Action("SiteInfo", "Home")</p></div>
+            <menu class="no-js">
                     @Html.Action("ShowMenu", "Menu")                    
-              </nav>
-            </div>
+            </menu>
         </header>
-        <div id="body">
-        
+        <div id="layout">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+            <section class="content">
                 @RenderBody()
             </section>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
-        </footer>
-
+        <footer></footer>
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
     </body>

@@ -4,12 +4,11 @@
     ViewBag.Title = "_LinkPartial";
 }
 
-<div class="wrap float-left">    
-<h1>@Model.LinkTitle</h1>
+<div class="wrap float-left">   
     <br />
         <p>
          <a class="purelycss_elegance_button align_left color_teal hover_black size_large" href="@Model.LinkUrl">
-         @Model.LinkText
+         @Model.LinkTitle
          </a>
        </p>
        @if (Request.IsAuthenticated) {
@@ -36,6 +35,5 @@
         }
     </p>
 </div>
-
 
 *@

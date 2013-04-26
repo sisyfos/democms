@@ -4,30 +4,17 @@
     ViewBag.Title = "Index";
 }
 
+  <div class="content">
+    <div class="innercontent">
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PicTitle)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PicUrl)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.PicAltText)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PicDesc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PicPrio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.CatName)
         </th>
         <th></th>
     </tr>
@@ -38,19 +25,7 @@
             @Html.DisplayFor(modelItem => item.PicTitle)
         </td>
         <td>
-            <img src="@item.PicUrl" alt="@item.PicAltText" width="50px" height="50px" />
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.PicAltText)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PicDesc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PicPrio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.CatName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.PicID }) |
@@ -61,3 +36,5 @@
 }
 
 </table>
+</div>
+</div>
